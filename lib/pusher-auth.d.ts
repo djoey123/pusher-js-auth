@@ -1,4 +1,4 @@
-import { AuthorizerGenerator } from 'pusher-js';
+import { AuthorizerGenerator } from 'pusher-js/with-encryption';
 
 export as namespace PusherBatchAuthorizer;
 
@@ -9,5 +9,6 @@ export = pusherBatchAuthorizer;
 declare module 'pusher-js' {
     export interface AuthorizerOptions {
         authDelay?: number;
+        useEncryption?: boolean;
     }
 }
